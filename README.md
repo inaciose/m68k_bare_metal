@@ -1,3 +1,17 @@
+# changes to work with my setup
+
+on libmetal changes Makefile to use m68k-linux-gnu & 68010
+run make and get libmetal-xxxx.a
+
+copy the standalone folder to sta1
+changes the Makefile to use m68k-linux-gnu & 68010
+change the plataform.ld to our memory model. 
+we already have the monitor to boot the machine and load the program to ram by srecords.
+we want to define the vectors for exceptions on the start of the RAM.
+change crt0.S: uncomment #define NO_EVT_COPY (because we already defined then at the start of RAM)
+change main.c: implement putchar_(), getchar_() and setup_duart()
+
+sta1 is now working and can be used as template
 
 # Bare Metal m68k Cross Compiler "Toolchain"
 - [Bare Metal m68k Cross Compiler "Toolchain"](#bare-metal-m68k-cross-compiler--toolchain-)

@@ -5,13 +5,13 @@
 #
 # 68000, 68010, 68020, 68030, 68040, 68060, cpu32 (includes 68332 and 68360),
 # 68302
-CPU=68000
+CPU=68010
 
 # Uncomment either of the following depending on how you have installed gcc on
 # your system. m68k-linux-gnu for Linux installations, m68k-eabi-elf if gcc was
 # built from scratch e.g. on a Mac by running the build script.
-# PREFIX=m68k-linux-gnu
-PREFIX=m68k-eabi-elf
+PREFIX=m68k-linux-gnu
+# PREFIX=m68k-eabi-elf
 
 # Dont modify below this line (unless you know what youre doing).
 CC=$(PREFIX)-gcc
