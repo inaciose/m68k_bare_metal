@@ -20,8 +20,13 @@ short int is 2 bytes
 int is 4 bytes  
 long is 4 bytes  
 
-duart_interrupts, is the uarta working with rx interrupts demo
+Added folders:  
+- sta1, is the uart A working by pooling  
+- duart_interrupts, is the uart A working with rx interrupts demo  
+- duart_circular_buffer, is the uart A working with rx interrupts with a circular buffer demo  
+- duart_counter, is the uart A working with rx interrupts with a circular buffer demo, plus a 300Hz timer  
 
+Bellow is the original instructions.  
 
 # Bare Metal m68k Cross Compiler "Toolchain"
 - [Bare Metal m68k Cross Compiler "Toolchain"](#bare-metal-m68k-cross-compiler--toolchain-)
