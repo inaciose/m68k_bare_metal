@@ -1,17 +1,27 @@
 # changes to work with my setup
 
-on libmetal changes Makefile to use m68k-linux-gnu & 68010
-run make and get libmetal-xxxx.a
+on libmetal changes Makefile to use m68k-linux-gnu & 68010  
+run make and get libmetal-xxxx.a  
 
-copy the standalone folder to sta1
-changes the Makefile to use m68k-linux-gnu & 68010
-change the plataform.ld to our memory model. 
-we already have the monitor to boot the machine and load the program to ram by srecords.
-we want to define the vectors for exceptions on the start of the RAM.
-change crt0.S: uncomment #define NO_EVT_COPY (because we already defined then at the start of RAM)
-change main.c: implement putchar_(), getchar_() and setup_duart()
+copy the standalone folder to sta1  
+changes the Makefile to use m68k-linux-gnu & 68010  
+change the plataform.ld to our memory model.   
+we already have the monitor to boot the machine and load the program to ram by srecords.  
+we want to define the vectors for exceptions on the start of the RAM.  
+change crt0.S: uncomment #define NO_EVT_COPY (because we already defined then at the start of RAM)  
+change main.c: implement putchar_(), getchar_() and setup_duart()  
+change crt0.S: added code to enable interrupts on startup  
 
-sta1 is now working and can be used as template
+sta1 is now working and can be used as template  
+
+
+char is 1 byte  
+short int is 2 bytes  
+int is 4 bytes  
+long is 4 bytes  
+
+duart_interrupts, is the uarta working with rx interrupts demo
+
 
 # Bare Metal m68k Cross Compiler "Toolchain"
 - [Bare Metal m68k Cross Compiler "Toolchain"](#bare-metal-m68k-cross-compiler--toolchain-)

@@ -5,7 +5,7 @@
 #define NO_EVT_COPY
 
 /* Uncomment the following if you dont want the interrupts enabled */
-//#define INT_ENABLE
+#define INT_ENABLE
 
 #define USEVBR (defined(mc68010) || defined(mc68020) || defined(mc68030) || \
                 defined(mc68040) || defined(mc68060) || defined(mc68332))
